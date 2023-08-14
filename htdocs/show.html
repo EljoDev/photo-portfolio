@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eljo's portfolio</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- ?source=flower&photo="Photo Path" -->
+    <header>
+        <a href="./index.html#galleries" class="back" id="back">&LeftArrow; Back</a>
+    </header>
+    <div class="container">
+        <img src="./img/" alt="" id="img">
+    </div>
+</body>
+<script>
+    const img = document.querySelector("#img")
+    const arg = new URL(document.location.href)
+    const source = arg.searchParams.get("source")
+    const photo = arg.searchParams.get("photo")
+    img.src = photo
+    back.href = "./galleries.html?g=" + source
+</script>
+<style>
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        max-height: 80vh;
+        max-width: 100%;
+        margin: auto 0;
+    }
+
+    header {
+        position: absolute;
+        top: 5vh;
+        left: 4vw;
+        text-align: left;
+
+    }
+
+    .home, .back {
+        font-family: 'heebo', sans-serif;
+        transition: color 333ms ease-in, background 333ms ease-in;
+    }
+
+    .home:hover, .back:hover {
+        /* background-color: var(--blue_0); */
+        color: var(--blue_0);
+    }
+</style>
+
+</html>

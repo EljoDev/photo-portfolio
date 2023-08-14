@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Playfair+Display&family=Tilt+Prism&display=swap');
+:root {
+    --black: #001219;
+    --blue_0: #0077B6;
+    --blue_1: #90E0EF;
+    --blue_2: #CAF0F8;
+    --white: #fafafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display';
+    color: var(--black);
+}
+
+body {
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    user-select: none;
+}
